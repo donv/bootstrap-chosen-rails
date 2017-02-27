@@ -9,6 +9,7 @@ Gemfile.lock
 
 # Ignore bundler config
 /.bundle
+/.idea
 /vendor/cache
 /vendor/bundle
 tmp/

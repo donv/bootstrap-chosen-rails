@@ -149,7 +149,7 @@
     span {
       display: block;
       margin-right: 26px;
-      @include text-overflow();
+      @include text-truncate();
     }
 
     abbr {
@@ -159,7 +159,7 @@
       height: 10px;
       position: absolute;
       right: 26px;
-      top: ($chosen-height - 10px) / 2;
+      top: ($chosen-height - 1rem) / 2;
       width: 12px;
 
       &:hover {
@@ -237,11 +237,10 @@
     @include border-bottom-radius($chosen-multi-border-radius);
     @include box-shadow($chosen-box-shadow);
     cursor: text;
-    height: auto !important;
-    height: 1%;
+    height: $chosen-height + 0.1rem;
     margin: 0;
     overflow: hidden;
-    padding: 0;
+    padding: 0.3rem;
     position: relative;
 
     li {
@@ -259,7 +258,7 @@
         border: 0 !important;
         @include box-shadow(none);
         color: $gray;
-        height: $chosen-multi-height - 8px;
+        height: $chosen-multi-height - 0.8rem;
         margin: 0;
         padding: 4px;
         outline: 0;
@@ -278,7 +277,7 @@
       border: $chosen-border;
       @include border-top-radius($chosen-border-radius);
       @include border-bottom-radius($chosen-border-radius);
-      @include gradient-vertical(white, $gray-lighter);
+      @include gradient-y(white, $gray-lighter);
       @include box-shadow($chosen-box-shadow);
       color: $gray-dark;
       cursor: default;
